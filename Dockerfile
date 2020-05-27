@@ -1,5 +1,6 @@
 FROM debian
 
-RUN apt-get update && \
-    apt-get -y install wget telnet curl netcat dnsutils && \
-    apt-get clean
+RUN apt-get update \
+ && apt-get -y install wget telnet curl netcat dnsutils \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
