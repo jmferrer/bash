@@ -7,7 +7,7 @@ ENV KUBESEAL_VERSION=v0.13.1
 
 # Debug connections
 RUN apt-get update \
- && DEBIAN_FRONTEND="noninteractive" apt-y install curl wget unzip git telnet curl netcat dnsutils python3-pip python3-jenkins jq gnupg gnupg2 gnupg1 \
+ && DEBIAN_FRONTEND="noninteractive" apt -y install curl wget unzip git telnet curl netcat dnsutils python3-pip python3-jenkins jq gnupg gnupg2 gnupg1 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
